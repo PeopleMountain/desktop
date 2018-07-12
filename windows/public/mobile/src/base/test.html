@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript" src="./ProcessBar.js"></script>
+	<script>
+		var bar = ProcessBar(200,5);
+		var body = document.getElementsByTagName("body")[0];
+		body.appendChild(bar.dom);
+		bar.changeProccessBar(50)
+	</script>
+</body>
+</html>

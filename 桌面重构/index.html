@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>windows</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> 
+	<meta name="apple-mobile-web-app-capable" content="yes"> 
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+	<meta name="format-detection" content="telephone=no"> 
+	<style type="text/css">
+		/*初始化*/
+		*{
+			padding:0;
+			margin: 0;
+		}
+		ul{
+			list-style: none;
+		}
+		li,p,span{
+			text-decoration: none;
+			cursor: default;
+		}
+
+		#desktop{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			right: 0px;
+			bottom:0px;
+			overflow: hidden;
+		}
+
+	</style>
+	  <script type="text/javascript">
+	  	var isPC = (function(){
+  			var userAgentInfo=navigator.userAgent;   
+		    var Agents =new Array("Android","iPhone","SymbianOS","Windows Phone","iPad","iPod");   
+		    var flag=true;   
+		    for(var v=0;v<Agents.length;v++) {   
+		       if(userAgentInfo.indexOf(Agents[v])>0) {   
+		         flag=false;   
+		         break;   
+		       }   
+		     }   
+		    return flag;   
+	  	})()
+    </script>
+</head>
+<body>
+	<div id="desktop"></div>
+	<canvas id="canvas" height="100%" width="100%" style="display: none;position:absolute;z-index: 99">
+		您的浏览器不支持HTML5 canvas,请换一个浏览器
+	</canvas>
+	<script type="text/javascript" src="./src/load/Loading.js"></script>
+	<script type="text/javascript" src="./src/load/LoadJS.js"></script>
+</body>
+</html>
